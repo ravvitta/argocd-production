@@ -2,14 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: devops-toolkit
-  namespace: argocd
+  namespace: openshift-gitops
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.openshift-gitops.argoproj.io
 spec:
   project: production
   source:
     path: helm
-    repoURL: https://github.com/vfarcic/devops-toolkit.git
+    repoURL: https://github.com/ravvitta/devops-toolkit.git
     targetRevision: HEAD
     helm:
       values: |

@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: demo
   source:
     path: helm
     repoURL: https://github.com/ravvitta/devops-paradox.git
@@ -19,7 +19,7 @@ spec:
           host: devopsparadox.com
       version: v3
   destination:
-    namespace: production
+    namespace: demo
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:

@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: production
+  name: demo
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: Production project
+  description: Demo project
   sourceRepos:
   - '*'
   destinations:

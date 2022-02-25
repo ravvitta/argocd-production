@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.openshift-gitops.argoproj.io
 spec:
-  project: production
+  project: demo
   source:
     path: helm
     repoURL: https://github.com/ravvitta/devops-toolkit.git
@@ -19,7 +19,7 @@ spec:
           host: devopstoolkitseries.com
       version: v3
   destination:
-    namespace: production
+    namespace: demo
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:

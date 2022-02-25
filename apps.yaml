@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: production
+  name: demo
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: demo
   source:
-    repoURL: https://github.com/ravvitta/argocd-production.git
+    repoURL: https://github.com/ravvitta/argocd-demo.git
     targetRevision: HEAD
     path: helm
   destination:
     server: https://kubernetes.default.svc
-    namespace: production
+    namespace: demo
   syncPolicy:
     automated:
       selfHeal: true
